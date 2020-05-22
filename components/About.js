@@ -1,0 +1,36 @@
+import React from "react";
+import { StyleSheet, Text, View, Button } from "react-native";
+
+class About extends React.Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.headerText}>About </Text>
+        <Button
+          title="Go to Home"
+          onPress={() => this.props.navigation.navigate("Home")}
+        />
+        <Button
+          title="Go Back"
+          onPress={() => this.props.navigation.goBack()}
+        />
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#F5FCFF",
+  },
+  headerText: {
+    fontSize: 20,
+    textAlign: "center",
+    margin: 10,
+    fontWeight: "bold",
+  },
+});
+export default About;
